@@ -1,0 +1,112 @@
+body, h1, h2, h3, h4, p, a {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  height: 100vh;
+  background-color: #eee;
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 50px;
+  color: white;
+  text-transform: none;
+  font-weight: 500;
+  margin: auto;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-image: rgba(34, 34, 34, 0.5);
+  display: flex;
+}
+
+.content {
+  width: 790px;
+  margin: 100px auto 50px;
+}
+
+.card-basic {
+margin-left: 50px;
+position: relative;
+left: 50px;
+}
+
+.card-trackout {
+  margin-left: 50px;
+position: relative;
+left: 50px;
+}
+
+
+.footer {
+  height: 200px;
+  background-color: black;
+  display: flex;
+}
+
+.beatstars {
+  margin-top: 15%;
+}
+
+.pricing-header {
+  margin-top: 8%;
+  max-width: 700px;
+}
+
+.scroll-down {
+  height: 100px;
+  width: 60px;
+  border: 2px solid white;
+  position: absolute;
+  left: 48%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after{
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid white;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: transparent;
+  border-left:transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::after {
+  top: 30%;
+  animation-delay: .3s;
+}
+@keyframes scroll-down{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    top: 90%;
+  }
+}
